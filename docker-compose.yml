@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  nexbet-app:
+    image: nexbet-app:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - MONGODB_URI=${MONGODB_URI}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+      - FRONTEND_URL=http://localhost:5000
+    depends_on:
+      - mongodb
+    restart: always
+    networks:
+      - nexbet-network
+
+  mongodb:
+    image: mongo:6-alpine
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=nexbet
+    restart: always
+    networks:
+      - nexbet-network
+
+volumes:
+  mongo-data:
+
+networks:
+  nexbet-network:
+    driver: bridge
