@@ -1,0 +1,106 @@
+.ad-watcher {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.ad-container {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ad-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ad-container > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.ad-player {
+  margin-top: 20px;
+}
+
+.ad-video {
+  background: #000;
+  border-radius: 5px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.placeholder {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer p {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 1s linear;
+}
+
+.ad-complete {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.ad-complete h3 {
+  color: #4CAF50;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.ad-complete p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.back-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
